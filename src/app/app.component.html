@@ -1,0 +1,69 @@
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+    
+    <p>
+      {{ title }}
+    </p>
+    
+    <input type="text" [(ngModel)] = "name">
+    <p>
+    {{ name }}
+    
+    </p>
+    
+   <app-successalert></app-successalert>
+   <app-warningalert></app-warningalert>
+   
+
+   <hr>
+   <!-- <input
+   type="text"
+   class="form-control"
+   (input)="onupdateservername($event)" > -->
+   <input
+   type="text"
+   class="form-control"
+   [(ngModel)]="servername"
+   placeholder="enter server name"
+    >
+   
+   <br>
+
+    <button class="btn btn-primary" [disabled]="!servername"  (click)="oncreate()">add server</button>
+    
+
+    
+
+   <p *ngIf="servercreated; else noServer" >
+    Server was created, server name is {{ servername }}
+  </p>
+  <ng-template #noServer>
+    <p>No server created?</p>
+  </ng-template>
+
+  <app-server *ngFor="let server of servers" ></app-server>
+    
+<div class="hr"></div>
+    
+  
+   
+   @if (a < b) {
+    {{a}} is greater than {{b}}
+    } @else if (b > a) {
+    {{a}} is less than {{b}}
+    } @else {
+    {{a}} is equal to {{b}}
+    }
+
+
+
+  </div>
+
+  
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="container">
+      <p [ngStyle]="{ backgroundColor: serverStatus === 'online' ? 'green' : 'red' }"
+ [ngClass]="{ online: serverStatus === 'online' }">
+Server name is {{ username }} and {{ serverStatus }}
+</p>
+
+    
+    </div>
+  </div>
+
